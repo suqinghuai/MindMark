@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+env/
+.venv/
+.env/
+
+# 日志
+*.log
+*.pdb
+
+# IDE
+.idea/
+.vscode/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# 配置文件
+config.ini
+logs/
+screenshot/

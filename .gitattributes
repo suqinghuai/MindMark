@@ -1,0 +1,2 @@
+main.py filter=git-crypt diff=git-crypt
+ai_grader.py filter=git-crypt diff=git-crypt

@@ -1,0 +1,47 @@
+[basic]
+# 循环阅卷次数（0表示无限循环，Ctrl+C手动停止）
+loop_count = 10
+# 每步操作间隔（秒）
+step_delay = 1.0
+# 日志文件夹
+log_dir = logs
+
+[screenshot]
+# 截图区域坐标：左上角x, 左上角y, 宽度, 高度
+region_left = 268
+region_top = 234
+region_width = 949
+region_height = 632
+# 截图保存路径
+save_dir = screenshot
+
+[ai]
+# 魔搭社区 API 配置
+api_key = YOUR_API_KEY
+base_url = https://api-inference.modelscope.cn/v1/
+model = Qwen/Qwen3-VL-8B-Instruct
+# 打分标准（会作为系统提示词发给大模型）
+grading_prompt = 你是一位严格的阅卷老师。请根据图片中的学生答题内容进行评分。具体标准如下：
+    内容切题（4 分）：紧扣题目，有明确观点或情感，内容完整；跑题、内容空洞酌情扣分。
+    结构逻辑（3 分）：段落清晰，语句连贯，逻辑通顺；结构混乱、语病多酌情扣分。
+    语言表达（2 分）：用词准确，无明显错别字和标点错误；文笔粗糙、错字多酌情扣分。
+    字数合规（1 分）：字数在 180-220 字之间，超出或不足扣 1 分。
+    打分参考：
+    8-10 分：切题、完整、通顺、优美，字数合规。
+    5-7 分：基本切题，结构清晰，语言通顺，存在少量问题。
+    1-4 分：跑题、内容残缺或语病较多，需大幅修改。
+    0 分：完全跑题或无有效内容。
+    请只返回JSON格式：{"score": 分数, "reason": "扣分/得分原因"}。分数必须是0-10的整数。
+# 最大重试次数
+max_retries = 2
+
+[automation]
+# 分数输入框坐标
+score_input_x = 381
+score_input_y = 952
+# 提交按钮坐标
+submit_btn_x = 1232
+submit_btn_y = 808
+# 下一题按钮坐标
+next_btn_x = 1232
+next_btn_y = 808
