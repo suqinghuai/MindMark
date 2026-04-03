@@ -49,10 +49,9 @@
 - `save_dir`：截图保存目录
 
 ### 3. AI配置 (`[ai]`)
-- `api_key`：魔搭社区API密钥
+- `api_key`：API密钥
 - `base_url`：API接口地址
 - `model`：使用的AI模型
-- `grading_prompt`：评分标准（系统提示词）
 - `max_retries`：API调用最大重试次数
 
 ### 4. 自动化配置 (`[automation]`)
@@ -83,7 +82,7 @@
 ## 📁 项目结构
 
 ```
-auto2/
+MindMark/
 ├── main.py          # 主入口文件
 ├── screenshot.py    # 截图功能模块
 ├── ai_grader.py     # AI评分模块
