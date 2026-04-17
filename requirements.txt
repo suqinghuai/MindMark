@@ -2,3 +2,5 @@ pyautogui>=0.9.54
 mss>=9.0.1
 Pillow>=10.0.0
 openai>=1.0.0
+pynput==1.8.1
+six==1.17.0
